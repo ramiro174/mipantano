@@ -20,6 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('/login', function (Request $request) {
      $lg=new LoginController();
+     
+     dd($request);
     
     return $usuario=$lg->loginapi($request);
     
