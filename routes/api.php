@@ -1,6 +1,8 @@
 <?php
-
-use Illuminate\Http\Request;
+    
+    use App\Http\Controllers\Auth\LoginController;
+    use App\User;
+    use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +19,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::post('/login', function (Request $request) {
-    return "aaa";
+     $lg=new LoginController();
+    
+    return $usuario=$lg->login($request);
+    
+    
 });
+
