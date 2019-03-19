@@ -37,7 +37,7 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
     
-    public function loginapi(Request $request)
+    public function loginapi( $request)
     {
        return "sss";
         return  $this->validateLogin($request);
