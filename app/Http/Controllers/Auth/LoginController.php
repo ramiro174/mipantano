@@ -39,7 +39,8 @@ class LoginController extends Controller
     
     public function loginapi( $request)
     {
-       return "sss";
+        dd($request);
+       
         return  $this->validateLogin($request);
         
         // If the class is using the ThrottlesLogins trait, we can automatically throttle
