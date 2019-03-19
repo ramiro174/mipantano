@@ -20,6 +20,7 @@
     Route::post('/login', function (Request $request) {
         $lg = new LoginController();
         dd($request);
+        
         return $usuario = $lg->loginapi($request);
     });
 
