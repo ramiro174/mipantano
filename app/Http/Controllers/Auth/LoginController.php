@@ -39,7 +39,7 @@ class LoginController extends Controller
     
     public function loginapi( $request)
     {
-        dd($request);
+      
        
         return  $this->validateLogin($request);
         
