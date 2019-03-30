@@ -8,6 +8,7 @@
     
     namespace App\Http;
     use function collect;
+    use function json_encode;
 
     class Respuesta
     {
@@ -34,5 +35,8 @@
                 $this->isempty=true;
             }
             
+        }
+        public function enJson(){
+            return  json_encode($this);
         }
     }
