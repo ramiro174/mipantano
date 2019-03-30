@@ -1,6 +1,7 @@
 <?php
     
     use App\Http\Controllers\Auth\LoginController;
+    use App\Http\Respuesta;
     use App\User;
     use Illuminate\Http\Request;
     
@@ -19,6 +20,9 @@
     });
     Route::post('/login', function (Request $request) {
         $lg = new LoginController();
-        return $usuario = $lg->loginapi($request);
+        
+        $Res=new Respuesta($lg->loginapi($request),200);
+        
+        return  $Res;
     });
 
