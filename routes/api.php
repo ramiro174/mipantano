@@ -19,8 +19,6 @@
     });
     Route::post('/login', function (Request $request) {
         $lg = new LoginController();
-        
-        
         return $usuario = $lg->loginapi($request);
     });
 
