@@ -20,9 +20,7 @@
     });
     Route::post('/login', function (Request $request) {
         $lg = new LoginController();
-        
         $Res=new Respuesta($lg->loginapi($request),200);
-        
         return  $Res;
     });
 

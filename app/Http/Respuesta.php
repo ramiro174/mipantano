@@ -12,7 +12,7 @@
     class Respuesta
     {
         
-        public $datos="";
+        public $datos;
         public $status=0;
         public $time="";
         public $isempty=false;
@@ -22,10 +22,10 @@
         
         /**
          * Respuesta constructor.
-         * @param string $datos
+         * @param collect $datos
          * @param int    $status
          */
-        public function __construct(string $datos, int $status)
+        public function __construct($datos, int $status)
         {
             $datos=collect($datos);
             $this->datos = $datos;
