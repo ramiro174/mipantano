@@ -13,7 +13,7 @@
     class Respuesta
     {
         
-        public $datos;
+        public $datos=[];
         public $status=0;
         public $time="";
         public $isempty=false;
