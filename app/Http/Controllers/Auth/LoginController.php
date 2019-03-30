@@ -55,7 +55,7 @@ class LoginController extends Controller
         
         if ($this->attemptLogin($request)) {
             
-            return  ["user"=>Auth::user(),"api_token"=>Auth::user()->api_token];
+            return  ["user"=>Auth::user()];
         }
         
         // If the login attempt was unsuccessful we will increment the number of attempts
