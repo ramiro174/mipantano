@@ -7,6 +7,7 @@
      */
     
     namespace App\Http;
+    use Carbon\Carbon;
     use function collect;
     use function json_encode;
 
@@ -34,6 +35,12 @@
             if($datos->count()>=1){
                 $this->isempty=false;
             }
+            if($this->status==200){
+                $this->mensaje="con datos";
+            }else{
+                $this->mensaje="Hubo problemas repito hubo problemas";
+            }
+            $this->time=Carbon::now();
             
         }
         public function enJson(){
