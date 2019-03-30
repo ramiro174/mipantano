@@ -16,7 +16,7 @@
         public $datos=[];
         public $status=0;
         public $time="";
-        public $isempty=false;
+        public $isempty=true;
         public $mensaje="Sin datos";
         public $tiporespuesta="application/json";
         public $descripcionError="";
@@ -32,7 +32,7 @@
             $this->datos = $datos;
             $this->status = $status;
             if($datos->count()>=1){
-                $this->isempty=true;
+                $this->isempty=false;
             }
             
         }
